@@ -1,0 +1,95 @@
+@mixin extend($extend, $prop, $value, $name) {
+  &-#{$name} {
+    @if ($extend != null) {
+      @extend #{$extend};
+    }
+    #{$prop}: #{$value};
+
+    @content;
+  }
+}
+
+
+@mixin align-items($extend) {
+  @include extend($extend, 'align-items', 'flex-start', 'start');
+  @include extend($extend, 'align-items', 'flex-end', 'end');
+  @include extend($extend, 'align-items', 'center', 'center');
+  @include extend($extend, 'align-items', 'baseline', 'baseline');
+  @include extend($extend, 'align-items', 'stretch', 'stretch');
+}
+
+// use .flex alone if you want 'display: flex' without justify-content and align-items
+.flex {
+  display: flex;
+
+  // Items alignment : .flex-$mainaxis[-$crossaxis]
+  @include extend('.flex', 'justify-content', 'flex-start', 'start') {
+    @include align-items('.flex-start');
+  }
+
+  @include extend('.flex', 'justify-content', 'flex-end', 'end') {
+    @include align-items('.flex-end');
+  }
+
+  @include extend('.flex', 'justify-content', 'center', 'center') {
+    @include align-items('.flex-center');
+  }
+
+  @include extend('.flex', 'justify-content', 'space-between', 'between') {
+    @include align-items('.flex-between');
+  }
+
+  @include extend('.flex', 'justify-content', 'space-evenly', 'evenly') {
+    @include align-items('.flex-evenly');
+  }
+
+  @include extend('.flex', 'justify-content', 'space-around', 'around') {
+    @include align-items('.flex-around');
+  }
+}
+
+// flex-direction : .dir-$direction[-reverse]
+.dir {
+  @include extend(null, 'flex-direction', 'column', 'col');
+  @include extend(null, 'flex-direction', 'column-reverse', 'col-reverse');
+  @include extend(null, 'flex-direction', 'row', 'row');
+  @include extend(null, 'flex-direction', 'row-reverse', 'row-reverse');
+}
+
+// Item alignment
+.item {
+  &-start {
+    align-self: flex-start;
+  }
+
+  &-end {
+    align-self: flex-end;
+  }
+
+  &-center {
+    align-self: center;
+  }
+
+  &-baseline {
+    align-self: baseline;
+  }
+}
+
+
+// flex-wrap : .doWrap[-reverse]
+.doWrap {
+  flex-wrap: wrap;
+
+  &-reverse {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+// Center all child elements
+.center-items {
+  display: flex;
+
+  & > * {
+    margin: auto;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "flex-toolbox",
+  "version": "1.0.0",
+  "description": "Toolbox to use flexbox with classes",
+  "main": "dist/flex.css",
+  "scripts": {
+    "build": "gulp"
+  },
+  "keywords": [
+    "flexbox",
+    "css",
+    "html"
+  ],
+  "author": "Nino Treyssat-Vincent",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
