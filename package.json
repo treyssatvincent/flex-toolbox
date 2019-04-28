@@ -2,9 +2,12 @@
   "name": "flex-toolbox",
   "version": "1.0.0",
   "description": "Toolbox to use flexbox with classes",
+  "repository": "https://github.com/treyssatvincent/flex-toolbox",
+  "bugs": "https://github.com/treyssatvincent/flex-toolbox/issues",
   "main": "dist/flex.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "flexbox",

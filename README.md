@@ -6,7 +6,7 @@ Toolbox to use flexbox with classes
 This add `display: flex`.
 Use .flex alone if you only want `display: flex`.
 ~~~ CSS
-.flex-[$mainaxis][-$crossaxis]*
+.flex-[$mainaxis][-$crossaxis]
 ~~~
 
 |  | possible values | 
@@ -24,7 +24,7 @@ Use .flex alone if you only want `display: flex`.
 | $direction | col, row |
 
 ### Item alignment `align-self`
-~~~
+~~~ CSS
 .item-$alignment
 ~~~
 |  | possible values | 
@@ -32,7 +32,7 @@ Use .flex alone if you only want `display: flex`.
 | $alignment | start, end, center, baseline |
 
 ### Others
-~~~
+~~~ CSS
 .doWrap[-reverse]
 .center-items
 ~~~
