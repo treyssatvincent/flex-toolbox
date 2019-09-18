@@ -17,7 +17,7 @@
   "author": "Nino Treyssat-Vincent",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "gulp": "^4.0.1",
+    "gulp": "^4.0.2",
     "gulp-csso": "^3.0.1",
     "gulp-sass": "^4.0.2"
   }
